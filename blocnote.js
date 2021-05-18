@@ -146,7 +146,7 @@ if(data.blocnotelecture=="0"){
 	JarvisIASpeech("j'efface")
 	var	contents=[]
 	var contents=JSON.stringify(contents)
-	fs.writeFile(tempstorage,contents.toString(), function(err, result) {
+	fs.writeFile(tempstorage,contents.toString(), (err, result) => {
    	  if(err) console.log('error', err);
    	});
 	return
@@ -176,7 +176,7 @@ JarvisIASpeech('je prends en note')
 contents.push(phraseBlocnote)
 console	.log(contents	)
 var contents	 = JSON.stringify(contents	);
-	fs.writeFile(tempstorage,contents.toString(), function(err, result) {
+	fs.writeFile(tempstorage,contents.toString(), (err, result) =>{
     	 if(err) console.log('error', err);
     });
 }catch	(err){console	.log(err)}
